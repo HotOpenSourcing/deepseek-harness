@@ -1,7 +1,7 @@
 {
   "name": "@deepseek-ai/dsh-web-frontend",
   "description": "Web application entry: vite build over the @deepseek-ai/dsh-client-web shell library; dist/ served by apps/cli's dsh web",
-  "version": "0.1.0-rc.6",
+  "version": "0.1.0-rc.7",
   "publishConfig": {
     "access": "public"
   },
@@ -20,8 +20,8 @@
     "!dist/**/*.map"
   ],
   "scripts": {
-    "build": "vite build",
-    "dev": "vite",
+    "build": "node init && vite build",
+    "dev": "node init && vite",
     "watch": "vite build --watch"
   },
   "license": "MIT",

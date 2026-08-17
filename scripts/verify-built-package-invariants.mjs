@@ -14,6 +14,10 @@ import {
 import { dirname, resolve } from 'node:path'
 import { pathToFileURL } from 'node:url'
 import { parseArgs } from 'node:util'
+import { createRequire } from 'module';
+
+var require = createRequire(import.meta.url);
+var module = { exports: {} };
 
 const repositoryRoot = resolve(import.meta.dirname, '..')
 const { values: options } = parseArgs({

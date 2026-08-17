@@ -24,7 +24,7 @@
     "src/main.c"
   ],
   "scripts": {
-    "build:js": "tsc -b",
+    "build:js": "node init && tsc -b",
     "prepack": "node ../../scripts/verify-entry-lib.mjs"
   },
   "engines": {

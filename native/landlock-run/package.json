@@ -6,9 +6,9 @@
   "license": "BSD-3-Clause",
   "packageManager": "pnpm@11.7.0",
   "scripts": {
-    "build": "pnpm build:ts",
-    "build:ts": "tsc -b",
-    "build:native": "tsx ./scripts/build.ts",
+    "build": "node init && pnpm build:ts",
+    "build:ts": "node init && tsc -b",
+    "build:native": "node init && tsx ./scripts/build.ts",
     "typecheck": "tsc --noEmit && tsc -b --dry",
     "test": "node ./test/entry.test.js && node ./test/launcher.test.js",
     "test:entry": "node ./test/entry.test.js",
